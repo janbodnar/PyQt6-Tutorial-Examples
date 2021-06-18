@@ -22,21 +22,19 @@ class Example(QWidget):
 
         self.initUI()
 
-
     def initUI(self):
 
         self.setGeometry(300, 300, 350, 200)
         self.setWindowTitle('Message box')
         self.show()
 
-
     def closeEvent(self, event):
 
         reply = QMessageBox.question(self, 'Message',
-                    "Are you sure to quit?", QMessageBox.StandardButtons.Yes |
-                    QMessageBox.StandardButtons.No, QMessageBox.StandardButtons.No)
+                    "Are you sure to quit?", QMessageBox.StandardButton.Yes |
+                    QMessageBox.StandardButton.No, QMessageBox.StandardButton.No)
 
-        if reply == QMessageBox.StandardButtons.Yes:
+        if reply == QMessageBox.StandardButton.Yes:
 
             event.accept()
         else:
@@ -45,7 +43,7 @@ class Example(QWidget):
 
 
 def main():
-
+    
     app = QApplication(sys.argv)
     ex = Example()
     sys.exit(app.exec())
