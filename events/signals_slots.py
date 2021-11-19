@@ -27,7 +27,7 @@ class Example(QWidget):
     def initUI(self):
 
         lcd = QLCDNumber(self)
-        sld = QSlider(Qt.Orientations.Horizontal, self)
+        sld = QSlider(Qt.Orientation.Horizontal, self)
 
         vbox = QVBoxLayout()
         vbox.addWidget(lcd)
