@@ -44,7 +44,7 @@ class Example(QWidget):
 
         qp.setPen(QColor(168, 34, 3))
         qp.setFont(QFont('Decorative', 10))
-        qp.drawText(event.rect(), Qt.Alignment.AlignCenter, self.text)
+        qp.drawText(event.rect(), Qt.AlignmentFlag.AlignCenter, self.text)
 
 
 def main():

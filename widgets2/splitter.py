@@ -38,11 +38,11 @@ class Example(QWidget):
         bottom = QFrame(self)
         bottom.setFrameShape(QFrame.Shape.StyledPanel)
 
-        splitter1 = QSplitter(Qt.Orientations.Horizontal)
+        splitter1 = QSplitter(Qt.Orientation.Horizontal)
         splitter1.addWidget(topleft)
         splitter1.addWidget(topright)
 
-        splitter2 = QSplitter(Qt.Orientations.Vertical)
+        splitter2 = QSplitter(Qt.Orientation.Vertical)
         splitter2.addWidget(splitter1)
         splitter2.addWidget(bottom)
 
