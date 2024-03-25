@@ -25,7 +25,7 @@ class Button(QPushButton):
 
     def mouseMoveEvent(self, e):
 
-        if e.buttons() != Qt.MouseButtons.RightButton:
+        if e.buttons() != Qt.MouseButton.RightButton:
             return
 
         mimeData = QMimeData()
@@ -35,14 +35,14 @@ class Button(QPushButton):
 
         drag.setHotSpot(e.position().toPoint() - self.rect().topLeft())
 
-        dropAction = drag.exec(Qt.DropActions.MoveAction)
+        dropAction = drag.exec(Qt.DropAction.MoveAction)
 
 
     def mousePressEvent(self, e):
 
         super().mousePressEvent(e)
 
-        if e.button() == Qt.MouseButtons.LeftButton:
+        if e.button() == Qt.MouseButton.LeftButton:
             print('press')
 
 
@@ -75,7 +75,7 @@ class Example(QWidget):
         position = e.position()
         self.button.move(position.toPoint())
 
-        e.setDropAction(Qt.DropActions.MoveAction)
+        e.setDropAction(Qt.DropAction.MoveAction)
         e.accept()
 
 
